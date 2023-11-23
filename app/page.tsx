@@ -36,6 +36,8 @@ export default function Home() {
             className="textarea"
             placeholder="Enter the CNF form"
             onChange={(e) => setCnf(e.target.value)}
+            // @ts-ignore
+            onPaste={(e) => setCnf(e.target.value)}
           />
           <div className="btns-wrapper">
             <button
