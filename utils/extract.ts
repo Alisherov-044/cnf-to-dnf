@@ -3,7 +3,11 @@ import { generateBinarySequences } from '.'
 export function extract(cnf: string) {
   let rules = generateBinarySequences(5)
 
-  let cnfArr = cnf.replaceAll('(', ' ').replaceAll(')', ' ').split('  ')
+  let cnfArr = cnf
+    .replaceAll(' ', '')
+    .replaceAll('(', ' ')
+    .replaceAll(')', ' ')
+    .split('  ')
 
   for (let each of cnfArr) {
     let localNumForm = ''
